@@ -21,11 +21,11 @@ export default function DishTable( { data } : { data: Dish[] } ) {
   const getRows = () => {
     if (rows.length) {
       return (
-        rows.slice(0,10).map((row) => (
+        rows.slice(0, 10).map((row) => (
           <TableRow
             key={row.position}
-            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-          
+            sx={{ '&:last-child td': { border: 0 }, '&:last-child th': { border: 0 } }}
+          >
             <TableCell component="th" scope="row">
               {row.position}
             </TableCell>
